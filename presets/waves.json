@@ -1,0 +1,7 @@
+{
+  "Sine Wave": "128+127*sin((x+f)/10)",
+  "Water Ripples": "128+127*sin(hypot(x-w/2,y-h/2)/8+f/5)",
+  "Breathing": "128+127*sin(f/10)",
+  "Interference": "128+127*sin(x/10)*cos(y/10+f/5)",
+  "Spiral Wave": "128+127*sin(atan2(y-h/2,x-w/2)*5+f/8)"
+}

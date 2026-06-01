@@ -1,0 +1,7 @@
+{
+  "Plasma 1": "(x*y)+f",
+  "Plasma 2": "x^y^f",
+  "Energy Field": "(x*x+y*y)^f",
+  "Chaotic Plasma": "(x*y)^(x+f)",
+  "Smooth Plasma": "128+127*sin(x/8)+127*cos(y/8+f/10)"
+}

@@ -1,0 +1,6 @@
+{
+  "Tunnel Core": "(x*x+y*y)^(f<<2)",
+  "Rotating Tunnel": "(x*x+y*y)^(f*3)",
+  "Warp Tunnel": "hypot(x-w/2,y-h/2)^f",
+  "Spiral Tunnel": "atan2(y-h/2,x-w/2)*f"
+}

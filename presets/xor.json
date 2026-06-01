@@ -1,0 +1,8 @@
+{
+  "XOR": "x^y",
+  "Moving XOR": "x^(y+f)",
+  "Diagonal Flow": "(x+f)^(y+f)",
+  "Shifted XOR": "(x^y)+f",
+  "Binary Drift": "x^(y+f*2)",
+  "Inverted XOR": "~(x^y)"
+}

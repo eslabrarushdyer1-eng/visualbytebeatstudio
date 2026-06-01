@@ -1,0 +1,8 @@
+{
+  "Classic 1": "t*(t>>5|t>>8)",
+  "Classic 2": "(t>>4)|(t*t)",
+  "Classic 3": "t*((t>>11)&(t>>8))",
+  "Classic 4": "(t>>6|t>>9)*10+4*(t&t>>13)",
+  "Noise Beat": "t^(t>>7)",
+  "Glitch Beat": "(t*5)&(t>>3)"
+}
