@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<title>Visual Bytebeat Studio</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+<script defer src="js/compiler.js"></script>
+<script defer src="js/variables.js"></script>
+<script defer src="js/renderer.js"></script>
+<script defer src="js/audio.js"></script>
+<script defer src="js/fullscreen.js"></script>
+<script defer src="js/storage.js"></script>
+<script defer src="js/presetLoader.js"></script>
+<script defer src="js/app.js"></script>
+</head>
+
+<body>
+
+<h1>Visual Bytebeat Studio</h1>
+
+<div class="panel">
+
+<h2>Mode</h2>
+
+<select id="mode">
+<option value="mono">Mono</option>
+<option value="rgb">RGB</option>
+</select>
+
+</div>
+
+<div class="panel">
+
+<h2>Canvas</h2>
+
+<label>
+Width
+<input id="width" type="number" value="256">
+</label>
+
+<label>
+Height
+<input id="height" type="number" value="256">
+</label>
+
+<label>
+FPS
+<input id="hz" type="number" value="30">
+</label>
+
+</div>
+
+<div class="panel">
+
+<h2>Mono Formula</h2>
+
+<textarea id="monoFormula">
+x^y^f
+</textarea>
+
+</div>
+
+<div class="panel" id="rgbPanel">
+
+<h2>RGB Formula</h2>
+
+<label>R</label>
+
+<textarea id="rFormula">
+x+f
+</textarea>
+
+<label>G</label>
+
+<textarea id="gFormula">
+y+f*2
+</textarea>
+
+<label>B</label>
+
+<textarea id="bFormula">
+(x^y)+f*3
+</textarea>
+
+</div>
+
+<div class="panel">
+
+<h2>Audio</h2>
+
+<label>
+
+<input
+id="audioEnabled"
+type="checkbox">
+
+Enable Audio
+
+</label>
+
+<br><br>
+
+<label>
+
+<input
+id="audioLinked"
+type="checkbox"
+checked>
+
+Use Visual Formula
+
+</label>
+
+<br><br>
+
+<textarea id="audioFormula">
+t*(t>>5|t>>8)
+</textarea>
+
+<br>
+
+<label>
+
+Sample Rate
+
+<select id="sampleRate">
+
+<option>8000</option>
+<option>11025</option>
+<option>22050</option>
+<option selected>44100</option>
+
+</select>
+
+</label>
+
+<br><br>
+
+<label>
+
+Volume
+
+<input
+id="volume"
+type="range"
+min="0"
+max="100"
+value="50">
+
+</label>
+
+</div>
+
+<div class="panel">
+
+<h2>Controls</h2>
+
+<button id="playBtn">
+Play
+</button>
+
+<button id="stopBtn">
+Stop
+</button>
+
+<button id="renderBtn">
+Render Once
+</button>
+
+<button id="resetTBtn">
+Reset T
+</button>
+
+<button id="resetFBtn">
+Reset F
+</button>
+
+<button id="resetAllBtn">
+Reset All
+</button>
+
+<button id="fullscreenBtn">
+Fullscreen
+</button>
+
+<button id="pngBtn">
+Export PNG
+</button>
+
+</div>
+
+<div class="panel">
+
+<h2>Presets</h2>
+
+<select id="presetList">
+
+<option>
+Loading...
+</option>
+
+</select>
+
+<button id="loadPresetBtn">
+Load Preset
+</button>
+
+</div>
+
+<div class="panel">
+
+<canvas id="canvas">
+</canvas>
+
+</div>
+
+<div class="panel">
+
+<h2>Variables</h2>
+
+<div id="variablesView">
+</div>
+
+</div>
+
+<div class="panel">
+
+<h2>History</h2>
+
+<div id="historyView">
+</div>
+
+</div>
+
+<div class="panel">
+
+<h2>Available Variables</h2>
+
+<pre>
+
+t
+x
+y
+f
+
+w
+h
+
+time
+
+cx
+cy
+
+r
+a
+
+u
+v
+
+fps
+ft
+
+pixelIndex
+
+sampleRate
+
+</pre>
+
+</div>
+
+<div class="panel">
+
+<h2>Available Functions</h2>
+
+<pre>
+
+sin
+cos
+tan
+
+asin
+acos
+atan
+atan2
+
+sqrt
+cbrt
+
+pow
+
+abs
+
+floor
+ceil
+round
+
+exp
+
+log
+log2
+log10
+
+hypot
+
+min
+max
+
+rand()
+fract()
+clamp()
+mix()
+smoothstep()
+
+PI
+E
+
+</pre>
+
+</div>
+
+</body>
+</html>
